@@ -5,17 +5,17 @@ This README would normally document whatever steps are necessary to get your app
 ### Aplicacion movil front de carSmileFront para la consulta de vehiculos por placa  ###
 
 * Aplicacion IONIC 2.0 con Angular 4
-* 1.0.0
+* 2.0.1
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
 
 * correr: npm install
 
-* correr app: ionic serve
+* correr app: ionic serve -c
 
-* Probar en ionic view: ionic upload 
-* Consola: https://apps.ionic.io/
+* Probar en ionic view: se encuentra configurado con git en la rama master
+* Consola: https://dashboard.ionicjs.com/apps
 
 
 ### Caracteristicas
