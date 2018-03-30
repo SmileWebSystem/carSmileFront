@@ -1,0 +1,69 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Datos Vehiculo </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding="true" class="has-header">
+
+  <ion-card>
+
+    <ion-card-content>
+      <ion-card-title>
+        Información Vehiculo
+
+      </ion-card-title>
+      <p>Placa: {{vehiculoData.placa}}</p>
+      <p>Clase: {{vehiculoData.clase}}</p>
+
+      <p>
+        Marca: {{vehiculoData.marca}}
+      </p>
+      <p>
+        Modelo: {{vehiculoData.modelo}}
+      </p>
+      <p>
+        Tipo: {{vehiculoData.tipo}}
+      </p>
+      <p>
+        Chasis: {{vehiculoData.chasis}}
+      </p>
+      <p>
+        Motor: {{vehiculoData.motor}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+
+
+<ion-card>
+
+    <ion-card-content>
+      <ion-card-title>
+        Ultima Poliza
+
+      </ion-card-title>
+      <p>Valor Asegurado: {{polizaData.valorAsegurado | currency:'USD':true:'1.2-2'}}</p>
+      <p>Compania: {{polizaData.compania}}</p>
+
+      <p>
+        Cod Compania: {{polizaData.codCompania}}
+      </p>
+      <p>
+        num Poliza: {{polizaData.numPoliza}}
+      </p>
+      <p>
+        Vigente: {{polizaData.vigente}}
+      </p>
+      <p>
+        Vigencia: {{polizaData.fechaVigencia | date: 'yyyy/MM/dd'}}
+      </p>
+      <p>
+        Fin Vigencia: {{polizaData.fechaFinVigencia | date: 'yyyy/MM/dd'}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

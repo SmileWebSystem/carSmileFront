@@ -1,0 +1,33 @@
+<!--
+  Generated template for the PropietarioPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Datos Siniestros</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-list-header>
+      <p>Total: {{siniestros.length}}</p>
+    </ion-list-header>
+
+    <ion-item *ngFor="let siniestro of siniestros">
+
+      <h2>{{siniestro.valor | currency:'USD':true:'1.2-2' }}</h2>
+      <h3>{{siniestro.fecha | date: 'yyyy/MM/dd'}}</h3>
+      <p>{{siniestro.numero}}</p>
+      <p>{{siniestro.estado}}</p>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>

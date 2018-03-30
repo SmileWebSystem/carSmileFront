@@ -1,0 +1,26 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Datos Comparendos</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-list-header>
+            <p>Total: {{comparendosFiltro.length}}</p>
+        </ion-list-header>
+
+        <ion-item *ngFor="let comparendo of comparendosFiltro">
+            <h2>{{comparendo.estado}}</h2>
+            <h5 text-wrap>{{comparendo.descripcion}}</h5>
+            <p>{{comparendo.fecha | date: 'yyyy/MM/dd'}}</p>
+            <p>{{comparendo.valor | currency:'USD':true:'1.2-2'}}</p>
+
+        </ion-item>
+    </ion-list>
+
+</ion-content>

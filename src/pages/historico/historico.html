@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Historico</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding="true" class="has-header">
+
+    <ion-list>
+        <button ion-item (click)="showConfirm(item.placa)" *ngFor="let item of hisorialService.getHistoricoList() | async">
+            <h2>{{item.placa}}</h2>
+            <p>{{item.fecha}}</p>
+            <span item-right [style.color]="getColorPuntaje(item.puntaje)">{{item.puntaje}}</span>
+        </button>
+    </ion-list>
+
+</ion-content>

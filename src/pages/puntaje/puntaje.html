@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Resultado</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding="true" class="has-header">
+
+
+  <ion-card>
+    <ion-card-header>
+      <h1 style="text-align:center;">{{getHistorialVehiculo().vehiculo.placa}}</h1>
+    </ion-card-header>
+
+    <ion-row>
+      <ion-col>
+        <button (click)="mostrarDatosVehiculo()" ion-button icon-left clear small>
+        <ion-icon name="ios-car"></ion-icon>
+        <div>Información Vehiculo</div>
+      </button>
+      </ion-col>
+
+    </ion-row>
+
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <h2 style="text-align:center;">PUNTAJE</h2>
+      <h1 [style.color]="getColorPuntaje(getResultadoPuntaje().puntajeTotal)" style="text-align:center;">{{getResultadoPuntaje().puntajeTotal}}</h1>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <h4 style="text-align:center;">Detalle Puntaje</h4>
+    </ion-card-header>
+
+    <ion-list inset>
+
+      <button ion-item (click)="consultaPropietarios()">
+  Propietarios:
+        <span item-right>{{getResultadoPuntaje().puntajePropietarios | number : '1.2-2'}}</span>
+</button>
+
+      <button ion-item (click)="consultaSiniestros()">
+  Siniestros:
+        <span item-right>{{getResultadoPuntaje().puntajeSiniestros | number : '1.2-2'}}</span>
+</button>
+
+      <button ion-item (click)="consultaComparendosAbiertos()">
+  Com Abiertos:
+        <span item-right>{{getResultadoPuntaje().puntajeComAbiertos | number : '1.2-2'}}</span>
+</button>
+
+      <button ion-item (click)="consultaComparendosCerrados()">
+  Com Cerrados:
+        <span item-right>{{getResultadoPuntaje().puntajeComCerrados | number : '1.2-2'}}</span>
+</button>
+
+    </ion-list>
+
+  </ion-card>
+
+
+</ion-content>

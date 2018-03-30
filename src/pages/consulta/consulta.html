@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Consulta Placa</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding="true" class="has-header">
+  <div class="spacer" style="width: 300px; height: 115px;"></div>
+
+  <label class="item item-input" id="consultaPlaca-input2" name="placa">
+        <ion-input type="text" [(ngModel)]="placa" placeholder="Ingrese Placa"></ion-input>        
+      </label>  
+  <button ion-button block icon-left (click)="consultarPlaca()">
+    <ion-icon name="ios-car"></ion-icon>
+    Consultar    
+  </button>
+
+  <ion-footer>
+      <label>V 2.0.0</label>
+  </ion-footer>
+
+</ion-content>
